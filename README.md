@@ -72,3 +72,11 @@ Project_Bank/ <br>
 -  Implement a dashboard for users to manage accounts and view analytics.
 
 # UI View
+![Screenshot (28)](https://github.com/user-attachments/assets/2afe1269-39bd-428a-a276-aaca4fb876c7)
+![Screenshot (29)](https://github.com/user-attachments/assets/2c0ece97-7752-43c2-a1c6-3862baf03845)
+![Screenshot (30)](https://github.com/user-attachments/assets/c50072e3-d3c5-4d49-a5d7-93bac7c825a7)
+![Screenshot (31)](https://github.com/user-attachments/assets/88310441-8de0-46bb-a621-2cd7db03de30)
+![Screenshot (32)](https://github.com/user-attachments/assets/afaaebe5-21b7-48f8-be0e-567767ab5757)
+![Screenshot (33)](https://github.com/user-attachments/assets/e54ce47d-78de-4917-8c86-a48a175af73c)
+![Screenshot (34)](https://github.com/user-attachments/assets/4675f14f-ad60-48e6-81f6-1b537fda9c82)
+![Screenshot (35)](https://github.com/user-attachments/assets/ac451a73-b13b-46d4-8c31-d7acb8cb8760)
