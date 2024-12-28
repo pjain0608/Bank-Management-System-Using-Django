@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: azure;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 1rem;
+}
+
+.header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header div p {
+    font-size: 25px;
+}
+
+.sub-header {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sub-header a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.contents {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #2d6dc7;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #2d6dc7;
+    outline: none;
+}
+
+/* Button styles */
+.submit-button {
+    text-align: center;
+}
+
+.submit-button button {
+    background-color: #2d6dc7;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-button button:hover {
+    background-color: #1f5e99;
+}
+
+/* Result message styles */
+.result-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result-message h2 {
+    color: #28a745;
+}
+
+.result-message p {
+    color: red;
+}
+
+/* Error message styles */
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .contents {
+        width: 100%;
+        padding: 15px;
+    }
+}

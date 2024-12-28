@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank | View Details</title>
+    <link rel="stylesheet" href="{% static 'css/display.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <p>
+                    Welcome to HDFC Bank NetBanking
+                </p>
+                <div>
+                    <img src="https://netbanking.hdfcbank.com/netbanking/gif/Logo.svg" alt="HDFC">
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">
+            <div>
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div>
+                <a href="{% url 'open' %}">Open Account</a>
+            </div>
+            <div>
+                <a href="{% url 'balance' %}">Balance Enquiry</a>
+            </div>
+            <div>
+                <a href="{% url 'credit' %}">Deposit</a>
+            </div>
+            <div>
+                <a href="{% url 'debit' %}">Withdraw</a>
+            </div>
+            <div>
+                <a href="{% url 'transfer' %}">Money Transfer</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="content">
+            <div class="search-bar">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="account_number" placeholder="Enter Account Number" required>
+                    <input type="password" name="pin" placeholder="Enter PIN" required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            {% if account %}
+            <div class="account-card">
+                <div class="user-data">
+                    <h2>{{ account.name }}</h2>
+                    <p><strong>Account Number:</strong> {{ account.account_number }}</p>
+                    <p><strong>Email:</strong> {{ account.email }}</p>
+                    <p><strong>Mobile:</strong> {{ account.mobile }}</p>
+                    <p><strong>Aadhar:</strong> {{ account.aadhar }}</p>
+                    <p><strong>Address:</strong> {{ account.address }}</p>
+                </div>
+                <div class="user-img">
+                    <img src="{{ account.img.url }}" alt="Profile Image">
+                </div>
+            </div>
+            {% elif error_message %}
+            <div class="account-card">
+                <p>{{ error_message }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank | Money Transfer</title>
+    <link rel="stylesheet" href="{% static 'css/transfer.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <p>
+                    Welcome to HDFC Bank NetBanking
+                </p>
+                <div>
+                    <img src="https://netbanking.hdfcbank.com/netbanking/gif/Logo.svg" alt="HDFC">
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">
+            <div>
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div>
+                <a href="{% url 'open' %}">Open Account</a>
+            </div>
+            <div>
+                <a href="{% url 'balance' %}">Balance Enquiry</a>
+            </div>
+            <div>
+                <a href="{% url 'credit' %}">Deposit</a>
+            </div>
+            <div>
+                <a href="{% url 'debit' %}">Withdraw</a>
+            </div>
+            <div>
+                <a href="{% url 'transfer' %}">Money Transfer</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="contents">
+            <h1>Transfer Amount</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="sender_account_number">Your Account Number:</label>
+                    <input type="text" id="sender_account_number" name="sender_account_number" placeholder="Enter Your Account Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pin">PIN:</label>
+                    <input type="password" id="pin" name="pin" placeholder="Enter Your PIN" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter Amount" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="transfer_type">Transfer To:</label>
+                    <select name="transfer_type" id="transfer_type">
+                        <option value="account">Account Number</option>
+                        <option value="mobile">Mobile Number</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="receiver">Enter Receiver's Detail:</label>
+                    <input type="text" id="receiver" name="receiver" placeholder="Enter Receiver's A/C, Mobile Number or Email" required>
+                </div>
+
+                <div class="submit-button">
+                    <button type="submit">Transfer</button>
+                </div>
+            </form>
+
+            {% if success_message %}
+                <div class="result-message" style="margin-top: 2rem;">
+                    <h2>{{ success_message }}</h2>
+                </div>
+            {% endif %}
+            {% if error %}
+                <div class="result-message" style="margin-top: 2rem;">
+                    <p style="color: red;">{{ error }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+</body>
+</html>

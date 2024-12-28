@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: azure;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 1rem;
+}
+
+.header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header div p {
+    font-size: 25px;
+}
+
+.sub-header {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sub-header a {
+    text-decoration: none;
+    color: black;
+}
+
+.search-bar {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-bar input[type="text"], .search-bar input[type="password"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+.account-card {
+    max-width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20rem;
+}
+
+.account-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.account-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.account-card p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.user-data p {
+    margin-top: 1rem;
+}

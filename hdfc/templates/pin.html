@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank | Pin Generation</title>
+    <link rel="stylesheet" href="{% static 'css/pin.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <p>
+                    Welcome to HDFC Bank NetBanking
+                </p>
+                <div>
+                    <img src="https://netbanking.hdfcbank.com/netbanking/gif/Logo.svg" alt="HDFC">
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">
+            <div>
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div>
+                <a href="{% url 'open' %}">Open Account</a>
+            </div>
+            <div>
+                <a href="{% url 'balance' %}">Balance Enquiry</a>
+            </div>
+            <div>
+                <a href="{% url 'credit' %}">Deposit</a>
+            </div>
+            <div>
+                <a href="{% url 'debit' %}">Withdraw</a>
+            </div>
+            <div>
+                <a href="{% url 'transfer' %}">Money Transfer</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="form-container">
+            <h2>Generate PIN</h2>
+            {% if message %}
+            <p class="message">{{ message }}</p>
+            {% endif %}
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="account_number" placeholder="Enter Account Number" value="{{ account_number|default:'' }}" required>
+                <button type="submit" name="generate_otp">Generate OTP</button>
+                <input type="text" name="otp" placeholder="Enter OTP">
+                <input type="password" name="new_pin" placeholder="Enter New PIN">
+                <button type="submit" name="set_pin">Set PIN</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

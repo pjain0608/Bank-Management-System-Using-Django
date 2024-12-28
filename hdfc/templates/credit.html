@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank | Deposit Money</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/credit.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <p>
+                    Welcome to HDFC Bank NetBanking
+                </p>
+                <div>
+                    <img src="https://netbanking.hdfcbank.com/netbanking/gif/Logo.svg" alt="HDFC">
+                </div>
+            </div>
+        </div>
+        <div class="sub-header">
+            <div>
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div>
+                <a href="{% url 'open' %}">Open Account</a>
+            </div>
+            <div>
+                <a href="{% url 'balance' %}">Balance Enquiry</a>
+            </div>
+            <div>
+                <a href="{% url 'credit' %}">Deposit</a>
+            </div>
+            <div>
+                <a href="{% url 'debit' %}">Withdraw</a>
+            </div>
+            <div>
+                <a href="{% url 'transfer' %}">Money Transfer</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="content">
+            <h1>Deposit Money</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="account_number">Account Number:</label>
+                <input type="text" id="account_number" name="account_number" required>
+    
+                <label for="pin">PIN:</label>
+                <input type="password" id="pin" name="pin" required>
+    
+                <label for="amount">Amount (₹):</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
+    
+                <button type="submit">Deposit</button>
+            </form>
+    
+            {% if success_message %}
+            <div class="success">
+                <p>{{ success_message }}</p>
+            </div>
+            {% elif error_message %}
+            <div class="error">
+                <p>{{ error_message }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>    
+</body>
+</html>

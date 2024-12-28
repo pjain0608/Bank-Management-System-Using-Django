@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: azure;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 1rem;
+}
+
+.header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header div p {
+    font-size: 25px;
+}
+
+.sub-header {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sub-header a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+    height: fit-content;
+    margin-top: 2rem;
+}
+
+.contents {
+    width: 70%;
+    /* border: 2px solid red; */
+    height: inherit;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.container {
+    background: white;
+    /* padding: 30px; */
+    width: 100%;
+}
+
+.container h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button {
+    margin-top: 2rem;
+}
+
+.button button {
+    width: 30%;
+    background-color: #004e8a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #003b6c;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input::placeholder {
+    color: #999;
+}
