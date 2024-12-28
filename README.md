@@ -71,3 +71,4 @@ Project_Bank/ <br>
 -  Include transaction history and account statements.
 -  Implement a dashboard for users to manage accounts and view analytics.
 
+# UI View
