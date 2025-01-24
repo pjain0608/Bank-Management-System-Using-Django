@@ -25,7 +25,7 @@ The system emphasizes user-friendly interfaces and secure data handling, making 
 # Tech Stack Used
 
 -  Backend Framework: Django (Python)
--  Frontend: HTML5, CSS3
+-  Frontend: HTML5, CSS
 -  Database: MySQL
 -  Email Integration: SMTP for transaction notifications
 
